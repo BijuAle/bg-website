@@ -5,7 +5,7 @@ const htmlmin = require("html-minifier-terser");
 module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy("./images/**");
   eleventyConfig.addPassthroughCopy("./assets/**");
-  eleventyConfig.addPassthroughCopy("./about/**");
+  eleventyConfig.addPassthroughCopy("./pages/about/bg.png");
 
   // Add plugins
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {

@@ -5,7 +5,9 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
+    /* background: url("../bg_.png"); */
     background-color: #E9EAD3;
+
 
 }
 
@@ -39,10 +41,9 @@ footer {
 
 body {
     margin: 0 auto;
-    background-color: #E9EAD3;
     max-width: 700px;
     text-align: center;
-    /* line-height: 110%; */
+    background-color: #E9EAD3;
 }
 
 main {
