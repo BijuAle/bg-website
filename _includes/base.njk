@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{{title}}</title>
+
+        <link rel="stylesheet" href="{{ '/assets/css/reset.css' | url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/mystyle.css' | url }}">
+        <link rel="stylesheet" href="/assets/css/photoswipe.css">
+    </head>
+    <body>
+        {% include 'header.njk' %}
+
+        <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+            {{ content | safe }}
+        </main>
+
+        {% include 'footer.njk' %}
+
+        <script type="module" src="/assets/js/photoswipe/index.js"></script>
+    </body>
+</html>
