@@ -5,10 +5,8 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    /* background: url("../bg_.png"); */
-    background-color: #E9EAD3;
-
-
+    background: url("../bg_.png");
+    /* background-color: #E9EAD3; */
 }
 
 #siteheading {
@@ -36,14 +34,18 @@ footer {
     color: grey;
     padding: .5rem;
     margin-top: 1rem;
-    background-color: #E9EAD3;
+    /* background-color: #E9EAD3; */
+    background: url("../bg_.png");
+
 }
 
 body {
     margin: 0 auto;
     max-width: 700px;
     text-align: center;
-    background-color: #E9EAD3;
+    /* background-color: #E9EAD3; */
+    background: url("../bg_.png");
+
 }
 
 main {
@@ -65,8 +67,6 @@ nav ul {
     margin: 1rem;
     display: inline-block;
     border-bottom: 1px solid #dac6be;
-
-
 }
 
 nav li {
