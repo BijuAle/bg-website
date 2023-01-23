@@ -5,7 +5,7 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    background: url("../bg_.png");
+    background: url("../bg.png");
     /* background-color: #E9EAD3; */
 }
 
@@ -35,7 +35,7 @@ footer {
     padding: .5rem;
     margin-top: 1rem;
     /* background-color: #E9EAD3; */
-    background: url("../bg_.png");
+    background: url("../bg.png");
 
 }
 
@@ -44,7 +44,7 @@ body {
     max-width: 700px;
     text-align: center;
     /* background-color: #E9EAD3; */
-    background: url("../bg_.png");
+    background: url("../bg.png");
 
 }
 
