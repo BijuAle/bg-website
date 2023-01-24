@@ -57,7 +57,8 @@ main {
 main img {
     max-width: 400px;
 }
-main p{
+
+main p {
     opacity: 70%;
 
 }
@@ -135,4 +136,8 @@ p {
     display: table-cell;
     margin-top: 4rem;
     vertical-align: middle;
+}
+
+.pswp-gallery img {
+    margin: .05rem;
 }
