@@ -20,7 +20,7 @@ title: Photography
         {% if photo.thumbAvif %}<source type="image/avif" srcset="{{ photo.thumbAvif }}">{% endif %}
         <!--Fallback jpg incase avif is not supported or just not generated. Also, better lighthouse score 😎-->
         <!--Check if image has an alt text set, defaults to "alt text" if not-->
-        <img loading="lazy" {% if photo.alt %} alt="{{ photo.alt }}"{% else %} alt="alt text"{% endif %} src="{{ photo.thumb }}" width="300px" height="300px">
+        <img loading="lazy" {% if photo.alt %} alt="{{ photo.alt }}"{% else %} alt="alt text"{% endif %} src="{{ photo.thumb }}" width="150px" height="150px">
       </picture>
     </a>
     {% endif %}
