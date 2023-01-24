@@ -56,7 +56,7 @@ main {
 }
 
 main img {
-    opacity: 100%;
+    opacity: 100% !important;
     max-width: 400px;
 }
 
@@ -118,11 +118,19 @@ p {
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-  }
-  .pswp__custom-caption a {
+}
+
+.pswp__custom-caption a {
     color: #fff;
     text-decoration: underline;
-  }
-  .hidden-caption-content {
+}
+
+.hidden-caption-content {
     display: none;
-  }
+}
+
+.about {
+    display: table-cell;
+    margin-top: 4rem;
+    vertical-align: middle;
+}
