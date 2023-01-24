@@ -1,6 +1,5 @@
 #!/bin/bash -eu
 
-# This script resizes photos from a given folder so that
 # the aspect ratio stays the same but the shortest side of
 # the image is set to 2400px
 

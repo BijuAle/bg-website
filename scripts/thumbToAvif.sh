@@ -1,6 +1,6 @@
 #!/bin/bash -eu
 
-# This script creates avif thumbnails from your other thumbnails. It's a smaller file and more performant, giving a better lighthouse score. Keep a fallback jpg though if avif isn't supported by the end user's device.
+# avif: smaller file and more performant, giving a better lighthouse score. Keep a fallback jpg though if avif isn't supported by the end user's device.
 
 input=/img/thumb/jpg/;
 output=/img/thumb/avif/;

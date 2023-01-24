@@ -1,15 +1,10 @@
 #!/bin/bash -eu
 
-# This script creates thumbnails from your files
-# it crops the images to a square
-# You can change the input and output folders. By default it outputs to a jpg folder inside /img/thumb/
-# Default size is 300px
-
 input=/img/full/
 output=/img/thumb/jpg/
 ext=.jpg
 startDir=$(pwd)
-thumbSize=300
+thumbSize=150
 
 createThumb() {
     inputFile="$1"; shift

@@ -1,6 +1,5 @@
 #!/bin/bash -eu
 
-# this script generates a json file with the following data:
 # image path, alt text, thumbnail paths for jpg and avif and
 # image height and width
 # dependencies: ffmpeg and jq
@@ -35,7 +34,7 @@ echo "    \"url\": \"$url${inputExt}\"," | tee -a $output
 echo "    \"alt\": \"$altText\"," | tee -a $output
 echo "    \"thumb\": \"$thumb${thumbExt}\"," | tee -a $output
 echo "    \"thumbAvif\": \"$avif.avif\"," | tee -a $output
-echo "    \"thumbSize\": 300", | tee -a $output
+echo "    \"thumbSize\": 150", | tee -a $output
 echo "    \"width\": $width," | tee -a $output
 echo "    \"height\": $height" | tee -a $output
 echo "  }," | tee -a $output
