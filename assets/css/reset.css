@@ -61,3 +61,23 @@ a{
     src: url("../fonts/Garamond_Italic.ttf");
     font-style: italic;
 }
+
+@font-face {
+    font-family: "Mediga";
+    src: url("../fonts/Mediga.otf");
+}
+
+@font-face {
+    font-family: "Glossy";
+    src: url("../fonts/glossy.otf");
+}
+
+@font-face {
+    font-family: "Gaela";
+    src: url("../fonts/gaela.otf");
+}
+
+@font-face {
+    font-family: "Cinzel";
+    src: url("../fonts/Cinzel-Regular.otf");
+}

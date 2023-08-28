@@ -5,21 +5,22 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    background: url("../bg.png");
-    /* background-color: #E9EAD3; */
+    background: url("../bg.png");    
 }
 
 #siteheading {
     margin-top: 1rem;
-    font-family: "Garamond R";
+    font-family: "Cinzel";
     font-size: 2.5rem;
+    
 }
 
 #siteheading a {
-    color: rgb(180, 147, 180);
+    color: #5f606b;
 }
 
 #sitesubheading {
+
     font-family: "Garamond Italic";
     font-size: 1.5rem;
     color: #A5A3A2;
@@ -64,20 +65,24 @@ main p {
 }
 
 nav ul {
+    background: rgb(9,9,121);
+    background: linear-gradient(90deg, rgba(9,9,121,0.21052170868347342) 19%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%);
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 1rem;
     display: inline-block;
+    border-radius: 10px;
+    border-top: 1px solid #dac6be;
     border-bottom: 1px solid #dac6be;
 }
 
 nav li {
+    font-family: "Cinzel";
     display: inline-block;
     margin: 1rem;
     text-transform: uppercase;
     font-size: 1.20rem;
-
 }
 
 nav a {
@@ -86,13 +91,12 @@ nav a {
 }
 
 nav a:hover {
-    transition: .2s;
+    /* transition: .2s;
     background-color: rgb(136, 136, 196);
     color: rgb(2, 255, 242);
     border: 1px solid purple;
-    border-radius: 5%;
-
-
+    border-radius: 5%; */
+border-top: 1px solid green;
 }
 
 h1 {
@@ -102,7 +106,8 @@ h1 {
 h1,
 h2,
 h3 {
-    margin: 0.4rem 0 0.4rem 0;
+    margin: 0.4rem 0 1rem 0;
+    opacity: 60%;
 }
 
 p {
@@ -140,4 +145,17 @@ p {
 
 .pswp-gallery img {
     margin: .05rem;
+}
+
+strong {
+    font-weight: bold;
+  }
+
+em{
+    font-style: italic;
+}
+
+section img:hover{
+opacity: 70%;
+transition: .4s;
 }
