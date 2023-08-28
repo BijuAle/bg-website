@@ -63,15 +63,6 @@
     "height": 1240
   },
   {
-    "url": "/images/graphic_designs/full/kvwrmi_badge.jpg",
-    "alt": "kuva kvwrmi_badge",
-    "thumb": "/images/graphic_designs/thumb/jpg/kvwrmi_badge.jpg",
-    "thumbAvif": "/images/graphic_designs/thumb/avif/kvwrmi_badge.avif",
-    "thumbSize": 150,
-    "width": 1540,
-    "height": 1276
-  },
-  {
     "url": "/images/graphic_designs/full/kvwrmi_mc.jpg",
     "alt": "kuva kvwrmi_mc",
     "thumb": "/images/graphic_designs/thumb/jpg/kvwrmi_mc.jpg",
@@ -126,7 +117,7 @@
     "height": 2245
   },
 {
-    "url": "/images/graphic_designs/author_advice.jpg",
+    "url": "/images/graphic_designs/full/author_advice.jpg",
     "alt": "kuva author_advice",
     "thumb": "/images/graphic_designs/thumb/jpg/author_advice.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/author_advice.avif",
@@ -135,7 +126,7 @@
     "height": 7016
   },
   {
-    "url": "/images/graphic_designs/biodiversity_of_nepal.jpg",
+    "url": "/images/graphic_designs/full/biodiversity_of_nepal.jpg",
     "alt": "kuva biodiversity_of_nepal",
     "thumb": "/images/graphic_designs/thumb/jpg/biodiversity_of_nepal.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/biodiversity_of_nepal.avif",
@@ -144,7 +135,7 @@
     "height": 6250
   },
   {
-    "url": "/images/graphic_designs/cmm_forest.jpg",
+    "url": "/images/graphic_designs/full/cmm_forest.jpg",
     "alt": "kuva cmm_forest",
     "thumb": "/images/graphic_designs/thumb/jpg/cmm_forest.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/cmm_forest.avif",
@@ -153,7 +144,7 @@
     "height": 2000
   },
   {
-    "url": "/images/graphic_designs/coffee_soffee.jpg",
+    "url": "/images/graphic_designs/full/coffee_soffee.jpg",
     "alt": "kuva coffee_soffee",
     "thumb": "/images/graphic_designs/thumb/jpg/coffee_soffee.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/coffee_soffee.avif",
@@ -162,7 +153,7 @@
     "height": 1500
   },
   {
-    "url": "/images/graphic_designs/cop26.jpg",
+    "url": "/images/graphic_designs/full/cop26.jpg",
     "alt": "kuva cop26",
     "thumb": "/images/graphic_designs/thumb/jpg/cop26.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/cop26.avif",
@@ -171,16 +162,16 @@
     "height": 2000
   },
   {
-    "url": "/images/graphic_designs/kvwrmi_logo.jpg",
+    "url": "/images/graphic_designs/full/kvwrmi_logo.png",
     "alt": "kuva kvwrmi_logo",
-    "thumb": "/images/graphic_designs/thumb/jpg/kvwrmi_logo.jpg",
-    "thumbAvif": "/images/graphic_designs/thumb/avif/kvwrmi_logo.avif",
+    "thumb": "/images/graphic_designs/thumb/jpg/kvwrmi_logo.png",
+    "thumbAvif": "/images/graphic_designs/thumb/avif/kvwrmi_logo.png",
     "thumbSize": 150,
     "width": 1313,
     "height": 1313
   },
   {
-    "url": "/images/graphic_designs/mgmt_carbon-mkt.jpg",
+    "url": "/images/graphic_designs/full/mgmt_carbon-mkt.jpg",
     "alt": "kuva mgmt_carbon-mkt",
     "thumb": "/images/graphic_designs/thumb/jpg/mgmt_carbon-mkt.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/mgmt_carbon-mkt.avif",
@@ -189,7 +180,7 @@
     "height": 7016
   },
   {
-    "url": "/img/graphic_designs/full/uni.jpg",
+    "url": "/images/graphic_designs/full/uni.jpg",
     "alt": "kuva uni",
     "thumb": "/images/graphic_designs/thumb/jpg/uni.jpg",
     "thumbAvif": "/images/graphic_designs/thumb/avif/uni.avif",
