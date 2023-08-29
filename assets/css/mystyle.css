@@ -117,14 +117,16 @@ p {
 
 .pswp__custom-caption {
     background: rgba(26, 8, 34, 0.459);
-    font-size: 1rem;
-    color: #fff;
+    font-family: "Garamond Italic";
+    /* font-style: italic; */
+    font-size: 1.5rem;
+    color: #cbc9db;
     width: calc(100% - 32px);
     max-width: 400px;
     border-radius: 4px;
     position: absolute;
-    left: 50%;
-    bottom: 0;
+    left: 85%;
+    top: 10%;
     transform: translateX(-50%);
 }
 

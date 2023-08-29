@@ -1,10 +1,12 @@
 import PhotoSwipeLightbox from '/assets/js/photoswipe/photoswipe-lightbox.esm.js';
+
 const options = {
   gallery: '#photogallery',
   children: 'a',
   showHideAnimationType: 'zoom',
   pswpModule: () => import('/assets/js/photoswipe/photoswipe.esm.js')
 };
+
 const lightbox = new PhotoSwipeLightbox(options);
 lightbox.on('uiRegister', function () {
   lightbox.pswp.ui.registerElement({
