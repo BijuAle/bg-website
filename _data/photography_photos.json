@@ -98,5 +98,104 @@
     "width": 2304,
     "height": 4608
   },
+  {
+    "url": "/img/full/10.jpg",
+    "alt": "kuva 10",
+    "thumb": "/img/thumb/jpg/10.jpg",
+    "thumbAvif": "/img/thumb/avif/10.avif",
+    "thumbSize": 150,
+    "width": 1024,
+    "height": 2048
+  },
+  {
+    "url": "/img/full/11.jpg",
+    "alt": "kuva 11",
+    "thumb": "/img/thumb/jpg/11.jpg",
+    "thumbAvif": "/img/thumb/avif/11.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1024
+  },
+  {
+    "url": "/img/full/1.jpg",
+    "alt": "kuva 1",
+    "thumb": "/img/thumb/jpg/1.jpg",
+    "thumbAvif": "/img/thumb/avif/1.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/img/full/2.jpg",
+    "alt": "kuva 2",
+    "thumb": "/img/thumb/jpg/2.jpg",
+    "thumbAvif": "/img/thumb/avif/2.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1365
+  },
+  {
+    "url": "/img/full/3.jpg",
+    "alt": "kuva 3",
+    "thumb": "/img/thumb/jpg/3.jpg",
+    "thumbAvif": "/img/thumb/avif/3.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/img/full/4.jpg",
+    "alt": "kuva 4",
+    "thumb": "/img/thumb/jpg/4.jpg",
+    "thumbAvif": "/img/thumb/avif/4.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/img/full/5.jpg",
+    "alt": "kuva 5",
+    "thumb": "/img/thumb/jpg/5.jpg",
+    "thumbAvif": "/img/thumb/avif/5.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/img/full/6.jpg",
+    "alt": "kuva 6",
+    "thumb": "/img/thumb/jpg/6.jpg",
+    "thumbAvif": "/img/thumb/avif/6.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1151
+  },
+  {
+    "url": "/img/full/7.jpg",
+    "alt": "kuva 7",
+    "thumb": "/img/thumb/jpg/7.jpg",
+    "thumbAvif": "/img/thumb/avif/7.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1237
+  },
+  {
+    "url": "/img/full/8.jpg",
+    "alt": "kuva 8",
+    "thumb": "/img/thumb/jpg/8.jpg",
+    "thumbAvif": "/img/thumb/avif/8.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/img/full/9.jpg",
+    "alt": "kuva 9",
+    "thumb": "/img/thumb/jpg/9.jpg",
+    "thumbAvif": "/img/thumb/avif/9.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1276
+  },
   {}
 ]
