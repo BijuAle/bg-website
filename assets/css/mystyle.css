@@ -5,14 +5,14 @@ header {
     left: 0;
     width: 100%;
     z-index: 1;
-    background: url("../bg.png");    
+    background: url("../topo.png");
 }
 
 #siteheading {
     margin-top: 1rem;
     font-family: "Cinzel";
     font-size: 2.5rem;
-    
+
 }
 
 #siteheading a {
@@ -36,7 +36,7 @@ footer {
     padding: .5rem;
     margin-top: 1rem;
     /* background-color: #E9EAD3; */
-    background: url("../bg.png");
+    background: url("../topo.png");
 
 }
 
@@ -45,7 +45,7 @@ body {
     max-width: 700px;
     text-align: center;
     /* background-color: #E9EAD3; */
-    background: url("../bg.png");
+    background: url("../topo.png");
 
 }
 
@@ -65,8 +65,8 @@ main p {
 }
 
 nav ul {
-    background: rgb(9,9,121);
-    background: linear-gradient(90deg, rgba(9,9,121,0.21052170868347342) 19%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%);
+    background: #95959573;
+    /* background: linear-gradient(90deg, rgba(9,9,121,0.21052170868347342) 19%, rgba(0,212,255,1) 100%, rgba(2,0,36,1) 100%); */
     list-style: none;
     text-align: center;
     padding: 0;
@@ -87,16 +87,12 @@ nav li {
 
 nav a {
     border: 1px solid transparent;
-
+    color: rgba(70, 41, 41, 0.932);
 }
 
-nav a:hover {
-    /* transition: .2s;
-    background-color: rgb(136, 136, 196);
-    color: rgb(2, 255, 242);
-    border: 1px solid purple;
-    border-radius: 5%; */
-border-top: 1px solid green;
+nav ul li:hover {
+    background: #53a593;
+    border-radius: 10%;
 }
 
 h1 {
@@ -151,13 +147,16 @@ p {
 
 strong {
     font-weight: bold;
-  }
+}
 
-em{
+em {
     font-style: italic;
 }
 
-section img:hover{
-opacity: 70%;
-transition: .4s;
+section img:hover {
+    opacity: 70%;
+    transition: .4s;
+}
+small{
+    font-size: 1rem;
 }

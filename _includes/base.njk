@@ -4,13 +4,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        <title>Bipana | {{title}}</title>
-        <link rel="icon" href="/assets/favicon.ico" sizes="any"><!-- 32×32 -->
+
+        <title>Bipana | {{ title | default('Bipana Gurung') }}</title>
+
+        <link rel="icon" href="/assets/favicon.ico" sizes="any">
+        <!-- 32×32 -->
         <link rel="stylesheet" href="{{ '/assets/css/reset.css' | url }}">
         <link rel="stylesheet" href="{{ '/assets/css/mystyle.css' | url }}">
         <link rel="stylesheet" href="/assets/css/photoswipe.css">
-        
+
     </head>
     <body>
         {% include 'header.njk' %}
@@ -22,6 +24,6 @@
         {% include 'footer.njk' %}
 
         <script type="module" src="/assets/js/photoswipe/index.js"></script>
-        
+
     </body>
 </html>

@@ -1,7 +1,30 @@
 ---
 layout: base.njk
-eleventyNavigation:
-  key: Home
-  order: 1
+title: Photography
 ---
-Welcome to my website :)
+
+<h1>{{title}}</h1>
+<p>A collection of beautiful pheonmenas seen through my lens. They reminiscence my formative times from the volunteer-days in rural Nepal to the episodes of work, social fellowship, and travels.</p>
+
+{% block content %}
+<!--Photoswipe needs an element with a given ID-->
+<section class="pswp-gallery" id="photogallery">
+  
+  {# Iterating all objects in _data/photos.json #}
+  {% for photo in photography_photos -%}
+
+  {# Last object in json is empty so ignore that #}
+  {% if photo.url | length %}
+    <a href="{{ photo.url }}" data-pswp-width="{{ photo.width }}" data-pswp-height="{{ photo.height }}" target="_blank" class="gallery-img">
+      <picture>
+        <!--If the json has an avif thumbnail, add it-->
+        {% if photo.thumbAvif %}<source type="image/avif" srcset="{{ photo.thumbAvif }}">{% endif %}
+        <!--Fallback jpg incase avif is not supported or just not generated. Also, better lighthouse score 😎-->
+        <!--Check if image has an alt text set, defaults to "alt text" if not-->
+        <img loading="lazy" {% if photo.alt %} alt="{{ photo.alt }}"{% else %} alt="alt text"{% endif %} src="{{ photo.thumb }}" width="150px" height="150px">
+      </picture>
+    </a>
+    {% endif %}
+  {%- endfor %}
+</section>
+{% endblock %}

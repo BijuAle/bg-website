@@ -1,16 +1,7 @@
 [
   {
-    "url": "/images/photography/full/bark.jpg",
-    "alt": "bark",
-    "thumb": "/images/photography/thumb/jpg/bark.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/bark.avif",
-    "thumbSize": 150,
-    "width": 3456,
-    "height": 4608
-  },
-  {
     "url": "/images/photography/full/bird5.jpg",
-    "alt": "bird5",
+    "alt": "A lone Rosefinch pirched on a sapling.<br><br><small>Sinduli, Nepal | 2023 March</small>",
     "thumb": "/images/photography/thumb/jpg/bird5.jpg",
     "thumbAvif": "/images/photography/thumb/avif/bird5.avif",
     "thumbSize": 150,
@@ -18,35 +9,53 @@
     "height": 1391
   },
   {
-    "url": "/images/photography/full/ls2.jpg",
-    "alt": "ls2",
-    "thumb": "/images/photography/thumb/jpg/ls2.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/ls2.avif",
+    "url": "/images/photography/full/3.jpg",
+    "alt": "A Swift couple making out on a twisted transmission cable.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/3.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/3.avif",
     "thumbSize": 150,
-    "width": 4608,
-    "height": 2304
+    "width": 2048,
+    "height": 1366
   },
   {
-    "url": "/images/photography/full/ls3.jpg",
-    "alt": "ls3",
-    "thumb": "/images/photography/thumb/jpg/ls3.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/ls3.avif",
+    "url": "/images/photography/full/1.jpg",
+    "alt": "Cuckoos perched on a tree stubs.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/1.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/1.avif",
     "thumbSize": 150,
-    "width": 4608,
-    "height": 2304
+    "width": 2048,
+    "height": 1366
   },
   {
-    "url": "/images/photography/full/ls.jpg",
-    "alt": "ls",
-    "thumb": "/images/photography/thumb/jpg/ls.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/ls.avif",
+    "url": "/images/photography/full/5.jpg",
+    "alt": "A Crimson Sunbird roosting high up on a mangoo tree.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/5.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/5.avif",
     "thumbSize": 150,
-    "width": 4608,
-    "height": 2304
+    "width": 2048,
+    "height": 1366
+  },
+  {
+    "url": "/images/photography/full/bark.jpg",
+    "alt": "A clutch of moth eggs on a bark.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/bark.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/bark.avif",
+    "thumbSize": 150,
+    "width": 3456,
+    "height": 4608
+  },
+  {
+    "url": "/images/photography/full/salamander.jpg",
+    "alt": "Salamanders. <br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/salamander.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/salamander.avif",
+    "thumbSize": 150,
+    "width": 1800,
+    "height": 1011
   },
   {
     "url": "/images/photography/full/macaque2.jpg",
-    "alt": "macaque2",
+    "alt": "A macaque seated on a stupa merlon. <br><br><small>Swayambhunath Stupa, Kathmandu | 2023 March</small>",
     "thumb": "/images/photography/thumb/jpg/macaque2.jpg",
     "thumbAvif": "/images/photography/thumb/avif/macaque2.avif",
     "thumbSize": 150,
@@ -55,7 +64,7 @@
   },
   {
     "url": "/images/photography/full/macaque3.jpg",
-    "alt": "macaque3",
+    "alt": "Grooming macaques seated on a stupa merlon. <br><br><small>Swayambhunath Stupa, Kathmandu | 2023 March</small>",
     "thumb": "/images/photography/thumb/jpg/macaque3.jpg",
     "thumbAvif": "/images/photography/thumb/avif/macaque3.avif",
     "thumbSize": 150,
@@ -63,8 +72,44 @@
     "height": 4608
   },
   {
+    "url": "/images/photography/full/ls3.jpg",
+    "alt": "A man ploughs the wet field with his oxen.<br><br><small>Gorkha, Nepal | 2019 June</small>",
+    "thumb": "/images/photography/thumb/jpg/ls3.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/ls3.avif",
+    "thumbSize": 150,
+    "width": 4608,
+    "height": 2304
+  },
+  {
+    "url": "/images/photography/full/q.jpg",
+    "alt": "An old woman carrying fodder on with a head strap.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/q.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/q.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1484
+  },
+  {
+    "url": "/images/photography/full/2.jpg",
+    "alt": "An old woman pruning her garden.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/2.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/2.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1365
+  },
+  {
+    "url": "/images/photography/full/r.jpg",
+    "alt": "An old man hand-weaving a 'Doko', a basket made of bamboo strips.<br><br><small>Sinduli, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/r.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/r.avif",
+    "thumbSize": 150,
+    "width": 2048,
+    "height": 1419
+  },
+  {
     "url": "/images/photography/full/men.jpg",
-    "alt": "men",
+    "alt": "Men in rendezvous under a fig tree.<br><br><small>Gorkha, Nepal | Gorkha, July</small>",
     "thumb": "/images/photography/thumb/jpg/men.jpg",
     "thumbAvif": "/images/photography/thumb/avif/men.avif",
     "thumbSize": 150,
@@ -72,17 +117,8 @@
     "height": 2304
   },
   {
-    "url": "/images/photography/full/salamander.jpg",
-    "alt": "salamander",
-    "thumb": "/images/photography/thumb/jpg/salamander.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/salamander.avif",
-    "thumbSize": 150,
-    "width": 1800,
-    "height": 1011
-  },
-  {
     "url": "/images/photography/full/tree2.jpg",
-    "alt": "tree2",
+    "alt": "In a daring feat, a man scales a Sal tree to collect its leaves that would eventually be hand-woven to make plates.<br><br><small>Gorkha, Nepal | 2019 July</small>",
     "thumb": "/images/photography/thumb/jpg/tree2.jpg",
     "thumbAvif": "/images/photography/thumb/avif/tree2.avif",
     "thumbSize": 150,
@@ -91,39 +127,12 @@
   },
   {
     "url": "/images/photography/full/tree.jpg",
-    "alt": "tree",
+    "alt": "In a daring feat, a man scales a Sal tree to collect its leaves that would eventually be hand-woven to make plates.<br><br><small>Gorkha, Nepal | 2019 July</small>",
     "thumb": "/images/photography/thumb/jpg/tree.jpg",
     "thumbAvif": "/images/photography/thumb/avif/tree.avif",
     "thumbSize": 150,
     "width": 2304,
     "height": 4608
-  },
-  {
-    "url": "/images/photography/full/1.jpg",
-    "alt": "kuva 1",
-    "thumb": "/images/photography/thumb/jpg/1.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/1.avif",
-    "thumbSize": 150,
-    "width": 2048,
-    "height": 1366
-  },
-  {
-    "url": "/images/photography/full/2.jpg",
-    "alt": "kuva 2",
-    "thumb": "/images/photography/thumb/jpg/2.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/2.avif",
-    "thumbSize": 150,
-    "width": 2048,
-    "height": 1365
-  },
-  {
-    "url": "/images/photography/full/3.jpg",
-    "alt": "kuva 3",
-    "thumb": "/images/photography/thumb/jpg/3.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/3.avif",
-    "thumbSize": 150,
-    "width": 2048,
-    "height": 1366
   },
   {
     "url": "/images/photography/full/4.jpg",
@@ -134,41 +143,34 @@
     "width": 2048,
     "height": 1366
   },
+ 
   {
-    "url": "/images/photography/full/5.jpg",
-    "alt": "kuva 5",
-    "thumb": "/images/photography/thumb/jpg/5.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/5.avif",
+    "url": "/images/photography/full/ls.jpg",
+    "alt": "Hills viewed from my perspective.<br><br><small>Gorkha, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/ls.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/ls.avif",
     "thumbSize": 150,
-    "width": 2048,
-    "height": 1366
+    "width": 4608,
+    "height": 2304
   },
+
   {
+    "url": "/images/photography/full/ls2.jpg",
+    "alt": "Life and elements in the stratosphere.<br><br><small>Gorkha, Nepal | 2023 March</small>",
+    "thumb": "/images/photography/thumb/jpg/ls2.jpg",
+    "thumbAvif": "/images/photography/thumb/avif/ls2.avif",
+    "thumbSize": 150,
+    "width": 4608,
+    "height": 2304
+  },
+    {
     "url": "/images/photography/full/p.jpg",
-    "alt": "kuva p",
+    "alt": "A bamboo polytunnel for vegetable farming built for the villagers by the Raleigh's ICS volunteer group 'Team Alaiche.'<br><br><small>Gorkha, Nepal | 2019 August</small>",
     "thumb": "/images/photography/thumb/jpg/p.jpg",
     "thumbAvif": "/images/photography/thumb/avif/p.avif",
     "thumbSize": 150,
     "width": 2048,
     "height": 1024
-  },
-  {
-    "url": "/images/photography/full/q.jpg",
-    "alt": "kuva q",
-    "thumb": "/images/photography/thumb/jpg/q.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/q.avif",
-    "thumbSize": 150,
-    "width": 2048,
-    "height": 1484
-  },
-  {
-    "url": "/images/photography/full/r.jpg",
-    "alt": "kuva r",
-    "thumb": "/images/photography/thumb/jpg/r.jpg",
-    "thumbAvif": "/images/photography/thumb/avif/r.avif",
-    "thumbSize": 150,
-    "width": 2048,
-    "height": 1419
   },
   {}
 ]
