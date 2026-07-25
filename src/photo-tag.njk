@@ -24,8 +24,7 @@ permalink: "/photo-tag/{{ tag | slugify }}/"
         {% for photo in tagPhotos %}
         <div class="slide {% if loop.first %}active{% endif %}">
             <div class="slide-image-container">
-                <img src="{{ photo.secure_url }}" alt="{{ photo.alt }}" title="Click to view fullscreen" {% if not
-                    loop.first %}loading="lazy" {% endif %}>
+                <img src="{{ photo.secure_url }}" alt="{{ photo.alt }}" title="Click to view fullscreen">
             </div>
 
             <div class="slide-sidebar">
@@ -153,7 +152,7 @@ permalink: "/photo-tag/{{ tag | slugify }}/"
 
     .slide {
         display: none;
-        animation: fadeEffect 0.6s ease-in-out;
+        animation: fadeEffect 0.3s ease-in-out;
     }
 
     .slide.active {
@@ -258,7 +257,7 @@ permalink: "/photo-tag/{{ tag | slugify }}/"
 
     @keyframes fadeEffect {
         from {
-            opacity: 0.3;
+            opacity: 0;
         }
 
         to {
