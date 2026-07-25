@@ -1,24 +1,15 @@
 {
-  "name": "bg-website",
+  "name": "bare-11ty-blog",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "bench": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "watch": "npx @11ty/eleventy --watch",
-    "serve": "npx @11ty/eleventy --serve",
-    "start": "npx @11ty/eleventy --serve",
-    "debug": "DEBUG=* npx @11ty/eleventy"
+    "start": "npx @11ty/eleventy --serve"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.2"
+    "@11ty/eleventy": "^2.0.1"
   },
   "dependencies": {
-    "html-minifier-terser": "^7.1.0",
-    "photoswipe-dynamic-caption-plugin": "^1.2.7"
+    "@hotwired/turbo": "^8.0.23",
+    "cloudinary": "^2.10.0",
+    "dotenv": "^17.4.2"
   }
 }

@@ -1,0 +1,141 @@
+/* Global styles */
+
+@font-face {
+    font-family: "Linux Biolinium O";
+    src: url("/assets/fonts/LinBiolinum_R.woff2") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "AireRomanPro";
+    src: url("/assets/fonts/AireRomanPro.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("/assets/fonts/Garamond.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("/assets/fonts/GaramondItalic.woff2") format("woff2");
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: "Garamond";
+    src: url("/assets/fonts/GaramondBold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@view-transition {
+    navigation: auto;
+}
+
+p,
+ul,
+ol,
+blockquote {
+    margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: .5rem;
+    color: rgb(64, 58, 47);
+    font-family: "AireRomanPro", Garamond, serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'AireRomanPro';
+    font-weight: normal;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+li {
+    margin-left: 1.5rem;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+:root {
+    --bg-color: rgb(194 173 150);
+    --text-main: #2b261e;
+    --text-heading: #4a4437;
+    --accent-ink: #1a3a5a;
+    --paper-texture: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    --hover-bg: rgba(164, 159, 110, 0.3);
+}
+
+body {
+    font-family: "Garamond";
+    color: var(--text-main);
+    background-color: var(--bg-color);
+    background-image: var(--paper-texture);
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 1.5rem;
+    position: relative;
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    text-shadow: 0 0 0.5px rgba(43, 38, 30, 0.2);
+}
+
+a {
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 5px;
+    color: var(--accent-ink);
+
+}
+
+a:hover {
+    background-color: var(--hover-bg);
+}
+
+.post-row {
+    display: grid;
+    grid-template-columns: 6rem 1fr;
+    column-gap: 1rem;
+}
+
+.post-title {
+    justify-self: start;
+}
+
+.post-date {
+    text-align: right;
+    color: grey;
+}

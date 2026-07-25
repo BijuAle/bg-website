@@ -1,73 +1,45 @@
-const fs = require("fs");
-const { DateTime } = require("luxon");
-const htmlmin = require("html-minifier-terser");
+module.exports = function (eleventyConfig) {
 
-module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy("./images/**");
-  eleventyConfig.addPassthroughCopy("./assets/**");
-  eleventyConfig.addPassthroughCopy("./pages/about/bg.png");
-
-  // Add plugins
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if (this.outputPath && this.outputPath.endsWith(".html")) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      });
-      return minified;
-    }
-
-    return content;
+  require("dotenv").config();
+  const cloudinary = require("cloudinary").v2;
+  cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
   });
 
-  // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter("head", (array, n) => {
-    if (!Array.isArray(array) || array.length === 0) {
-      return [];
-    }
-    if (n < 0) {
-      return array.slice(n);
-    }
+  // Copy CSS to output as-is
+  eleventyConfig.addPassthroughCopy("src/style.css");
+  eleventyConfig.addPassthroughCopy("src/assets");
 
-    return array.slice(0, n);
-  });
-
-  // Return the smallest number argument
-  eleventyConfig.addFilter("min", (...numbers) => {
-    return Math.min.apply(null, numbers);
-  });
-
-  function filterTagList(tags) {
-    return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
-  }
-
-  eleventyConfig.addFilter("filterTagList", filterTagList)
-
-  // Create an array of all tags
-  eleventyConfig.addCollection("tagList", function (collection) {
-    let tagSet = new Set();
-    collection.getAll().forEach(item => {
-      (item.data.tags || []).forEach(tag => tagSet.add(tag));
+  // Human-friendly date: "Jan 10, 2026"
+  eleventyConfig.addFilter("dateReadable", (dateVal) => {
+    const d = new Date(dateVal);
+    return d.toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      timeZone: "UTC"
     });
-
-    return filterTagList([...tagSet]);
   });
 
-  eleventyConfig.setBrowserSyncConfig({
-    ui: false,
-    ghostMode: false
+  // Add getAllTags filter
+  eleventyConfig.addFilter("getAllTags", (collectionsObj) => {
+    let tagSet = new Set();
+    Object.keys(collectionsObj).forEach((tag) => {
+      if (tag !== "all" && tag !== "post" && (collectionsObj[tag] && collectionsObj[tag].length > 0)) {
+        tagSet.add(tag);
+      }
+    });
+    return [...tagSet];
   });
 
   return {
-    templateFormats: [
-      "md",
-      "njk",
-      "html",
-      "liquid"
-    ],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-  }
-}
+    dir: {
+      input: "src",
+      output: "dist",
+      includes: "_includes",
+      data: "_data"
+    }
+  };
+};

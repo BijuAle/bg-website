@@ -1,0 +1,61 @@
+---
+layout: base.njk
+title: Essays
+pagination:
+  size: 20
+  data: collections.post
+  alias: posts
+  reverse: true
+---
+<div class="index-wrapper">
+  <div class="post-list">
+    {%- for post in posts -%}
+    <div class="post-row">
+      <span class="post-date">{{ post.data.date | dateReadable }}</span>
+      <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+    </div>
+    {%- endfor -%}
+
+    <div style="margin-top: 2rem; text-align: center; font-size: 1.5rem; opacity: 0.8;">
+      {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">☜</a>{% endif %}
+      {% if pagination.href.next %}<a href="{{ pagination.href.next }}">☞</a>{% endif %}
+    </div>
+  </div>
+
+  <aside class="category-sidebar">
+    <h2>Category</h2>
+    <div class="category-list">
+      {%- for tag in collections | getAllTags | sort %}
+      {%- if tag != "post" %}
+      <a href="/tags/{{ tag | slugify }}/">
+        {{ tag }} ({{ collections[tag].length }})
+      </a>
+      {%- endif %}
+      {%- endfor %}
+    </div>
+  </aside>
+</div>
+
+<style>
+  .post-row {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .post-date {
+    font-family: "Linux Biolinium O";
+    font-size: 1.2rem;
+    width: 120px;
+  }
+
+  .index-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px;
+  }
+
+  .category-sidebar {
+    position: sticky;
+    top: 2rem;
+  }
+</style>

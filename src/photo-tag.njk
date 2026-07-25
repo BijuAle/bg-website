@@ -1,0 +1,268 @@
+---
+layout: base.njk
+pagination:
+  data: photos.tags
+  size: 1
+  alias: tag
+permalink: "/photo-tag/{{ tag | slugify }}/"
+---
+
+<h1>{{ tag }}</h1>
+
+<div class="slideshow-wrapper">
+    {% set tagPhotos = photos.byTag[tag] %}
+
+    {% if tagPhotos | length > 1 %}
+    <div class="slideshow-top-nav">
+        <button class="nav-btn" onclick="moveSlide(-1)" aria-label="Previous image">←</button>
+        <span class="slide-counter"><span id="current-slide-num">1</span> of {{ tagPhotos | length }}</span>
+        <button class="nav-btn" onclick="moveSlide(1)" aria-label="Next image">→</button>
+    </div>
+    {% endif %}
+
+    <div id="slideshow-container">
+        {% for photo in tagPhotos %}
+        <div class="slide {% if loop.first %}active{% endif %}">
+            <div class="slide-image-container">
+                <img src="{{ photo.secure_url }}" alt="{{ photo.alt }}" title="Click to view fullscreen" {% if not
+                    loop.first %}loading="lazy" {% endif %}>
+            </div>
+
+            <div class="slide-sidebar">
+                <div class="metadata-list">
+                    {% if photo.context and photo.context.caption %}
+                    <div class="caption">{{ photo.context.caption }}</div>
+                    {% endif %}
+                    <div class="specs">
+                        {% if photo.context.DateTimeOriginal %}
+                        <span><em>{{ photo.context.DateTimeOriginal }}</em></span>
+                        {% endif %} {% if photo.context.Make %}
+                        <span><em>{{ photo.context.Make }} {{ photo.context.Model }}</em></span>
+                        {% endif %} {% if photo.context.iso %}
+                        <span> <em>ISO {{ photo.context.iso }}</em></span>
+                        {% endif %} {% if photo.context.ApertureValue %}
+                        <span> <em>{{ photo.context.ApertureValue }}</em></span>
+                        {% endif %} {% if photo.context.FocalLength %}
+                        <span><em>{{ photo.context.FocalLength }}</em></span>
+                        {% endif %} {% if photo.context.ExposureTime %}
+                        <span><em>{{ photo.context.ExposureTime }}</em></span>
+                        {% endif %} {% if photo.width %}
+                        <span><em>{{ photo.width }} × {{ photo.height }} px</em></span>
+                        {% endif %}
+                    </div>
+                </div>
+
+
+                {% if photo.context.gps %}
+                <div class="map-container">
+                    {% set gps = photo.context.gps | replace(' ', '') %}
+                    {% set lat = gps.split(',')[0] %}
+                    {% set lng = gps.split(',')[1] %}
+                    <iframe width="100%" height="320" frameborder="0" style="border: 0"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://maps.google.com/maps?q={{ lat }},{{ lng }}&z=15&t=k&output=embed" allowfullscreen
+                        loading="lazy"></iframe>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    // Using window to avoid 'Identifier has already been declared' errors 
+    // when Turbo Drive re-evaluates the script on subsequent page visits.
+    window.currentSlide = 0;
+
+    window.moveSlide = function (n) {
+        const slides = document.querySelectorAll('.slide');
+        if (slides.length === 0) return;
+
+        slides[window.currentSlide].classList.remove('active');
+
+        window.currentSlide += n;
+
+        if (window.currentSlide >= slides.length) {
+            window.currentSlide = 0;
+        } else if (window.currentSlide < 0) {
+            window.currentSlide = slides.length - 1;
+        }
+
+        slides[window.currentSlide].classList.add('active');
+
+        const counter = document.getElementById('current-slide-num');
+        if (counter) {
+            counter.innerText = window.currentSlide + 1;
+        }
+    }
+
+    window.toggleFullscreen = function () {
+        const img = document.querySelector('.slide.active .slide-image-container img');
+        if (!img) return;
+
+        if (!document.fullscreenElement) {
+            img.requestFullscreen().catch(err => {
+                console.log(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    }
+
+    // Touch swipe gestures
+    if (!window.swipeInitialized) {
+        let touchstartX = 0;
+        let touchendX = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        document.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX;
+            if (document.querySelector('.slideshow-wrapper')) {
+                const swipeThreshold = 50;
+                if (touchendX < touchstartX - swipeThreshold) window.moveSlide(1);
+                if (touchendX > touchstartX + swipeThreshold) window.moveSlide(-1);
+            }
+        }, { passive: true });
+
+        window.swipeInitialized = true;
+    }
+</script>
+<style>
+    .caption {
+        border: 1px solid grey;
+        padding: .5rem;
+        border-radius: 4px;
+        background-color: burlywood;
+    }
+
+    .specs {
+        padding: .5rem;
+    }
+
+    .specs span {
+        color: grey;
+    }
+
+    .slideshow-wrapper {
+        position: relative;
+    }
+
+    .slide {
+        display: none;
+        animation: fadeEffect 0.6s ease-in-out;
+    }
+
+    .slide.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    @media (min-width: 700px) {
+        .slide.active {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .slide-image-container {
+        flex: 1;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.03);
+    }
+
+    .slide-image-container img {
+        max-width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        display: block;
+        border-radius: 2px;
+        border: 2px solid teal;
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .slide-sidebar {
+        width: 100%;
+        font-family: "Garamond", serif;
+    }
+
+    @media (min-width: 700px) {
+        .slide-sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+    }
+
+    .metadata-list {
+        display: flex;
+        flex-direction: column;
+        border: 1 px solid brown;
+    }
+
+    .metadata-list span {
+        display: flex;
+        align-items: center;
+        font-family: "Linux Biolinium O";
+    }
+
+    .metadata-list em {
+        font-style: normal;
+        font-family: inherit;
+        font-size: 0.95rem;
+    }
+
+    .map-container {
+        margin-top: 1rem;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+
+    .slideshow-top-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom:.5rem;
+        font-family: "AireRomanPro", Garamond, serif;
+    }
+
+    .slide-counter {
+        font-size: 1.4rem;
+        color: var(--text-heading);
+        min-width: 5rem;
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    .nav-btn {
+        background: none;
+        border-radius: 2px;
+    }
+
+    .nav-btn:hover {
+        cursor:pointer;
+    }
+
+    @keyframes fadeEffect {
+        from {
+            opacity: 0.3;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+</style>

@@ -1,0 +1,40 @@
+---
+layout: base.njk
+
+eleventyComputed:
+  title: "Tag ({{ tag }})"
+
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+
+permalink: "/tags/{{ tag | slugify }}/"
+---
+<div>
+  {%- for post in collections[tag] | reverse %}
+  <div class="post-row">
+    <span class="post-date">{{ post.data.date | dateReadable }}</span>
+    <a class="post-title" href="{{ post.url }}">{{ post.data.title }}</a>
+  </div>
+  {%- endfor %}
+</div>
+
+<a href="/" style="display: inline-block; margin-top: 2rem;">☜ Back to all posts</a>
+
+<style>
+  .post-row {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .post-date {
+    font-family: "Linux Biolinium O";
+    font-size: 1.2rem;
+    width: 120px;
+  }
+</style>

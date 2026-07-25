@@ -1,0 +1,189 @@
+---
+layout: base.njk
+title: Photography
+---
+
+<section class="photo-grid">
+    {% for tag in photos.tags %}
+    {% if photos.thumbnails[tag] %}
+
+    {% set gravity = "" %}
+    {% if tag == "Second Whittling Project (Barn Owl)" %}
+    {% set gravity = "&g=north" %}
+    {% endif %}
+
+    <a class="photo-cell" href="/photo-tag/{{ tag | slugify }}/">
+        <span class="card-face">
+            <img src="{{ photos.thumbnails[tag].secure_url }}?w=600&h=600&c=fill&f=auto&q=auto" alt="{{ tag }}"
+                loading="lazy" />
+            <span class="photo-label">{{ tag }}</span>
+        </span>
+    </a>
+    {% endif %}
+    {% endfor %}
+</section>
+
+
+<style>
+    .photo-label {
+        text-transform: capitalize;
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        align-items: start;
+    }
+
+    .photo-cell {
+        position: relative;
+        display: block;
+        text-decoration: none;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Card face: sits above pseudo-element stack cards */
+    .card-face {
+        display: block;
+        position: relative;
+        z-index: 1;
+        background: #dcd9d0;
+        /* Soothing Polaroid tone */
+        padding: 6px 6px;
+        border: 1px solid darkgrey;
+        border-radius: 6px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: box-shadow 0.4s ease;
+    }
+
+    .photo-cell:nth-child(4n+1) {
+        transform: rotate(-2deg);
+    }
+
+    .photo-cell:nth-child(4n+2) {
+        transform: rotate(2.5deg);
+    }
+
+    .photo-cell:nth-child(4n+3) {
+        transform: rotate(-1.5deg);
+    }
+
+    .photo-cell:nth-child(4n+4) {
+        transform: rotate(3deg);
+    }
+
+    /* Stack cards behind the face */
+    .photo-cell::before,
+    .photo-cell::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #dcd9d0;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+        z-index: 0;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid darkgrey;
+        border-radius: 6px;
+    }
+
+    .photo-cell::before {
+        transform: rotate(-2deg) translate(-3px, 3px);
+    }
+
+    .photo-cell::after {
+        transform: rotate(3deg) translate(3px, 5px);
+    }
+
+    .photo-cell:nth-child(4n+1)::before {
+        transform: rotate(-3deg) translate(-2px, 2px);
+    }
+
+    .photo-cell:nth-child(4n+1)::after {
+        transform: rotate(4deg) translate(2px, 2px);
+    }
+
+    .photo-cell:nth-child(4n+2)::before {
+        transform: rotate(4deg) translate(2px, -2px);
+    }
+
+    .photo-cell:nth-child(4n+2)::after {
+        transform: rotate(-3deg) translate(-2px, 2px);
+    }
+
+    .photo-cell:nth-child(4n+3)::before {
+        transform: rotate(-4deg) translate(-2px, -2px);
+    }
+
+    .photo-cell:nth-child(4n+3)::after {
+        transform: rotate(3deg) translate(2px, -2px);
+    }
+
+    .photo-cell:nth-child(4n+4)::before {
+        transform: rotate(2deg) translate(2px, 2px);
+    }
+
+    .photo-cell:nth-child(4n+4)::after {
+        transform: rotate(-5deg) translate(-2px, -2px);
+    }
+
+    .photo-cell img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        filter: sepia(5%) contrast(98%);
+        margin: 0 !important;
+        /* Overrides global image margin */
+        border: 1px solid darkgrey !important;
+        border-radius: 4px;
+        transition: filter 0.4s ease;
+    }
+
+    .photo-label {
+        display: block;
+        margin-top: 8px;
+        font-family: "Garamond", serif;
+        font-size: 0.9rem;
+        color: #000;
+        text-align: center;
+        font-variant: small-caps;
+        letter-spacing: 0.05em;
+    }
+
+    .photo-cell:hover {
+        transform: scale(1.05) rotate(0deg) !important;
+        z-index: 100;
+    }
+
+    .photo-cell:hover .card-face {
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    }
+
+    .photo-cell:hover::before {
+        transform: rotate(-6deg) translate(-6px, 6px) scale(1.02);
+    }
+
+    .photo-cell:hover::after {
+        transform: rotate(6deg) translate(6px, 8px) scale(1.02);
+    }
+
+    .photo-cell:hover img {
+        filter: sepia(0%) contrast(100%);
+    }
+
+    @media (max-width: 600px) {
+        .photo-grid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card-face {
+            padding: 6px 6px 20px 6px;
+        }
+    }
+</style>
